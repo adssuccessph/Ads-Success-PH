@@ -12,6 +12,271 @@
     section{padding:70px 0}.section-title{text-align:center;margin-bottom:40px}.section-title h2{color:var(--dark);font-size:clamp(28px,4vw,42px);margin-bottom:10px}.section-title p{color:var(--muted);max-width:760px;margin:auto}.packages-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.package-card{background:#fff;border:1px solid var(--border);border-radius:24px;padding:26px;box-shadow:0 10px 30px rgba(23,32,51,.06);display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden}.package-card.featured{border:2px solid var(--primary);box-shadow:0 18px 50px rgba(21,93,252,.16)}.ribbon{position:absolute;right:18px;top:18px;background:var(--accent);color:var(--dark);font-size:12px;font-weight:900;padding:6px 10px;border-radius:999px}.package-card h3{color:var(--dark);font-size:23px;padding-right:74px}.price{font-size:40px;line-height:1;color:var(--primary);font-weight:900}.price small{font-size:15px;color:var(--muted);font-weight:700}.package-card p{color:var(--muted)}.package-list{display:grid;gap:10px;margin:4px 0 10px}.package-list li{list-style:none;padding-left:26px;position:relative;color:var(--muted)}.package-list li:before{content:"✓";position:absolute;left:0;color:var(--primary);font-weight:900}.package-card .btn{margin-top:auto;width:100%}
     .terms{background:var(--dark);color:#fff}.terms .section-title h2{color:#fff}.terms .section-title p{color:#c8d2e6}.terms-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.term-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:22px}.term-card h3{color:#fff;margin-bottom:8px}.term-card p{color:#c8d2e6;font-size:14px}
     .order-section{background:radial-gradient(circle at bottom left,rgba(255,183,3,.16),transparent 30%),linear-gradient(135deg,#fff 0%,#eef4ff 100%)}.form-card{width:min(900px,100%);margin:auto;background:#fff;border:1px solid var(--border);border-radius:26px;box-shadow:0 20px 60px rgba(23,32,51,.10);overflow:hidden}.form-header{background:linear-gradient(135deg,var(--dark),#0b2a67);color:#fff;padding:30px}.form-header h2{font-size:32px;margin-bottom:8px}.form-header p{color:#d5dbea}form{padding:30px}.form-note{background:#fff9e8;border:1px solid #ffe0a3;padding:14px;border-radius:14px;color:#4a3b10;margin-bottom:22px;font-size:14px}.payment-box{background:#f8fafc;border:1px dashed var(--border);padding:18px;border-radius:16px;margin-bottom:22px}.payment-box h3{color:var(--dark);margin-bottom:8px}.payment-box p{color:var(--muted);font-size:14px}.payment-details{display:grid;gap:8px;margin-top:12px}.payment-detail{background:#fff;border:1px solid var(--border);border-radius:12px;padding:11px 12px;color:var(--dark);font-weight:700}.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.field{margin-bottom:18px}label{display:block;color:var(--dark);font-weight:800;margin-bottom:7px;font-size:14px}input,select,textarea{width:100%;padding:13px 14px;border:1px solid var(--border);border-radius:12px;font-size:15px;outline:none;color:var(--text);background:#fff;transition:.2s ease;font-family:inherit}input:focus,select:focus,textarea:focus{border-color:var(--primary);box-shadow:0 0 0 4px rgba(21,93,252,.10)}textarea{min-height:110px;resize:vertical}.helper{color:var(--muted);display:block;margin-top:5px;font-size:12px}.total-box{background:#eef4ff;border:1px solid #cfe0ff;border-radius:14px;padding:15px;color:var(--dark);font-weight:900;margin-bottom:18px}.total-box span{color:var(--primary);font-size:24px}.checkbox-row{display:flex;gap:10px;align-items:flex-start;margin:12px 0 20px;color:var(--muted);font-size:14px}.checkbox-row input{width:auto;margin-top:4px}.hidden{display:none}.submit-row{display:flex;gap:14px;align-items:center;flex-wrap:wrap}button{border:none;background:var(--primary);color:#fff;padding:14px 22px;border-radius:12px;font-weight:900;font-size:15px;cursor:pointer;transition:.2s ease}button:hover{background:var(--primary-dark);transform:translateY(-2px)}button:disabled{opacity:.65;cursor:not-allowed;transform:none}.status{display:none;padding:12px 14px;border-radius:12px;font-weight:800;font-size:14px}.status.success{display:block;background:#ecfdf5;color:var(--success);border:1px solid #bbf7d0}.status.error{display:block;background:#fef2f2;color:var(--danger);border:1px solid #fecaca}footer{background:var(--dark);color:#c8d2e6;padding:26px 0;text-align:center;font-size:14px}@media(max-width:900px){.hero-grid,.packages-grid,.terms-grid,.grid-2{grid-template-columns:1fr}.nav{align-items:flex-start;flex-direction:column}.nav-links{display:flex;justify-content:flex-start;width:100%;gap:10px}.nav-links a{font-size:13px}.hero{padding:58px 0 48px}section{padding:54px 0}.form-header,form{padding:24px}}
+  
+    /* ===== Responsive Improvements: Tablet + Mobile ===== */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .btn {
+      white-space: normal;
+    }
+
+    @media (max-width: 1100px) {
+      .container {
+        width: min(960px, 94%);
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .hero-grid,
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .grid-3,
+      .packages-grid,
+      .terms-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        overflow-x: hidden;
+      }
+
+      header {
+        position: relative;
+        padding: 16px 0;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+      }
+
+      .brand,
+      .brand-text,
+      .logo {
+        max-width: 100%;
+      }
+
+      .brand-logo {
+        width: 42px;
+        height: 42px;
+        flex: 0 0 auto;
+      }
+
+      .nav-links {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        gap: 8px;
+        padding-bottom: 4px;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .nav-links a {
+        flex: 0 0 auto;
+        font-size: 13px;
+        background: rgba(255,255,255,0.08);
+        padding: 8px 10px;
+        border-radius: 999px;
+      }
+
+      .nav-links .nav-cta {
+        padding: 8px 10px;
+      }
+
+      .hero {
+        padding: 48px 0 42px;
+      }
+
+      h1 {
+        font-size: clamp(32px, 10vw, 44px);
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 48px 0;
+      }
+
+      .hero-actions,
+      .contact-links {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn,
+      button {
+        width: 100%;
+        text-align: center;
+      }
+
+      .hero-card,
+      .card,
+      .case-box,
+      .offer-card,
+      .contact-box,
+      .form-cta-box,
+      .package-card,
+      .term-card,
+      .form-card {
+        border-radius: 18px;
+      }
+
+      .hero-card,
+      .card,
+      .case-box,
+      .offer-card,
+      .contact-box,
+      .form-cta-box,
+      .package-card {
+        padding: 22px;
+      }
+
+      .profile-area {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .profile-photo {
+        width: 96px;
+        height: 96px;
+      }
+
+      .grid-3,
+      .grid-2,
+      .packages-grid,
+      .terms-grid,
+      .ad-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .ad-card img {
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+      }
+
+      .price {
+        font-size: 34px;
+      }
+
+      .section-title {
+        margin-bottom: 28px;
+      }
+
+      .section-title h2 {
+        font-size: clamp(26px, 8vw, 34px);
+      }
+
+      form {
+        padding: 22px;
+      }
+
+      .form-header {
+        padding: 24px;
+      }
+
+      input,
+      select,
+      textarea {
+        font-size: 16px;
+      }
+
+      .submit-row,
+      .submit-area {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        width: 92%;
+      }
+
+      .brand-text,
+      .logo {
+        font-size: 17px;
+      }
+
+      .brand-text small,
+      .logo small {
+        font-size: 10px;
+      }
+
+      .badge {
+        font-size: 12px;
+      }
+
+      .hero {
+        padding: 38px 0 34px;
+      }
+
+      h1 {
+        font-size: 31px;
+      }
+
+      .hero p,
+      .section-title p,
+      .card p,
+      .package-card p,
+      .contact-box p,
+      .form-cta-box p {
+        font-size: 15px;
+      }
+
+      .hero-card,
+      .card,
+      .case-box,
+      .offer-card,
+      .contact-box,
+      .form-cta-box,
+      .package-card {
+        padding: 18px;
+      }
+
+      .form-card {
+        padding: 0;
+      }
+
+      .form-header,
+      form {
+        padding: 20px;
+      }
+
+      .ad-content {
+        padding: 14px;
+      }
+
+      .list li,
+      .package-list li,
+      .hero-card li {
+        padding-left: 22px;
+      }
+
+      footer {
+        font-size: 13px;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -27,7 +292,7 @@
       <div class="package-card"><h3>Custom Request</h3><div class="price">TBD</div><p>For clients with a different request, extra creatives, or additional campaign assistance.</p><ul class="package-list"><li>Custom package discussion</li><li>Extra creative options</li><li>Additional instructions or support</li><li>Final price depends on request</li></ul><a class="btn btn-primary" href="#order-form" onclick="selectPackage('Custom Request','TBD')">Select Package</a></div>
     </div></div></section>
     <section id="guidelines" class="terms"><div class="container"><div class="section-title"><h2>Simple Service Guidelines</h2><p>Please read this before ordering so expectations are clear.</p></div><div class="terms-grid"><div class="term-card"><h3>Ads Budget Separate</h3><p>The service fee is separate from Meta/Facebook ads budget. Client pays ads budget directly through their own ad account.</p></div><div class="term-card"><h3>No Guaranteed Results</h3><p>Sales, leads, and messages are not guaranteed because results depend on offer, budget, audience, page quality, and response time.</p></div><div class="term-card"><h3>Revision Limit</h3><p>Ad creatives include 1 minor revision only. Major changes or new design direction may require additional fee.</p></div><div class="term-card"><h3>DIY Means Client Runs It</h3><p>For DIY packages, the client will set up and run the ads using the guide provided by Ads Success PH.</p></div><div class="term-card"><h3>Complete Details Required</h3><p>Client must provide complete details, logo, product photos, offer, and business information before work starts.</p></div><div class="term-card"><h3>Payment Before Work</h3><p>Work starts after payment proof and client details are submitted and verified.</p></div></div></div></section>
-    <section id="order-form" class="order-section"><div class="container"><div class="section-title"><h2>Order & Payment Form</h2><p>Fill out this form after choosing your package and sending your payment.</p></div><div class="form-card"><div class="form-header"><h2>Submit Your Order</h2><p>Your order details and proof of payment will be saved for review.</p></div><form id="paymentForm" method="POST" target="hidden_iframe"><div class="form-note">Please send payment first, then upload your proof of payment below. Work starts after payment and details are verified.</div><div class="payment-box"><h3>Payment Details</h3><p>Palitan mo itong placeholders ng actual GCash/bank details mo bago i-upload sa GitHub.</p><div class="payment-details"><div class="payment-detail">GCash Name: Joebert Greganda</div><div class="payment-detail">GCash Number: 0928 166 1777</div><div class="payment-detail">Email: ads.success.ph21@gmail.com</div></div></div>
+    <section id="order-form" class="order-section"><div class="container"><div class="section-title"><h2>Order & Payment Form</h2><p>Fill out this form after choosing your package and sending your payment.</p></div><div class="form-card"><div class="form-header"><h2>Submit Your Order</h2><p>Your order details and proof of payment will be saved for review.</p></div><form id="paymentForm" method="POST" target="hidden_iframe"><div class="form-note">Please send payment first, then upload your proof of payment below. Work starts after payment and details are verified.</div><div class="payment-box"><h3>Payment Details</h3><p>Palitan mo itong placeholders ng actual GCash/bank details mo bago i-upload sa GitHub.</p><div class="payment-details"><div class="payment-detail">GCash Name: YOUR NAME HERE</div><div class="payment-detail">GCash Number: 09XX XXX XXXX</div><div class="payment-detail">Email: ads.success.ph21@gmail.com</div></div></div>
       <div class="grid-2"><div class="field"><label for="fullName">Full Name *</label><input type="text" id="fullName" name="fullName" placeholder="Juan Dela Cruz" required></div><div class="field"><label for="businessName">Business Name *</label><input type="text" id="businessName" name="businessName" placeholder="Business name" required></div></div><div class="grid-2"><div class="field"><label for="email">Email Address *</label><input type="email" id="email" name="email" placeholder="your@email.com" required></div><div class="field"><label for="contactNumber">Contact Number *</label><input type="text" id="contactNumber" name="contactNumber" placeholder="09XXXXXXXXX" required></div></div><div class="field"><label for="facebookPage">Facebook Page Link</label><input type="url" id="facebookPage" name="facebookPage" placeholder="https://www.facebook.com/yourpage"></div><div class="grid-2"><div class="field"><label for="selectedPackage">Selected Package *</label><select id="selectedPackage" name="selectedPackage" required><option value="">Select package</option><option value="DIY Facebook Ads Guide" data-price="500">DIY Facebook Ads Guide — ₱500</option><option value="Static Ad Creative" data-price="300">Static Ad Creative — ₱300</option><option value="DIY Guide + 1 Ad Creative" data-price="750">DIY Guide + 1 Ad Creative — ₱750</option><option value="DIY Guide + 2 Ad Creatives" data-price="1000">DIY Guide + 2 Ad Creatives — ₱1,000</option><option value="Starter Facebook Ads Setup" data-price="1500">Starter Facebook Ads Setup — ₱1,500</option><option value="Custom Request" data-price="TBD">Custom Request — TBD</option></select></div><div class="field"><label for="paymentMethod">Payment Method *</label><select id="paymentMethod" name="paymentMethod" required><option value="">Select payment method</option><option value="GCash">GCash</option><option value="Bank Transfer">Bank Transfer</option><option value="Maya">Maya</option><option value="Other">Other</option></select></div></div><div class="total-box">Amount to Pay: <span id="amountDisplay">₱0</span></div><input type="hidden" id="amount" name="amount" value=""><div class="field"><label for="offerDetails">Product / Service / Offer Details *</label><textarea id="offerDetails" name="offerDetails" placeholder="Example: I want to promote customized mugs, food trays, solar training, real estate offer, etc." required></textarea></div><div class="field"><label for="targetCustomers">Target Customers</label><textarea id="targetCustomers" name="targetCustomers" placeholder="Example: People near Valenzuela, small business owners, homeowners, students, moms, etc."></textarea></div><div class="field"><label for="assetLinks">Logo / Product Photo Links</label><textarea id="assetLinks" name="assetLinks" placeholder="Paste Google Drive, Canva, Facebook, or image links here."></textarea><span class="helper">For ad creative packages, please provide logo and product photos.</span></div><div class="field"><label for="notes">Additional Notes</label><textarea id="notes" name="notes" placeholder="Other instructions, preferred design style, promo details, deadline, etc."></textarea></div><div class="field"><label for="proofFile">Upload Proof of Payment Image *</label><input type="file" id="proofFile" name="proofFile" accept="image/png, image/jpeg, image/jpg, image/webp" required><span class="helper">Accepted: JPG, PNG, WEBP. Recommended file size below 5MB.</span></div><input type="hidden" id="proofBase64" name="proofBase64"><input type="hidden" id="proofFileName" name="proofFileName"><input type="hidden" id="proofMimeType" name="proofMimeType"><div class="hidden"><label for="website">Website</label><input type="text" id="website" name="website"></div><label class="checkbox-row"><input type="checkbox" id="agreeTerms" required><span>I confirm that ads budget is separate, results are not guaranteed, and work starts after payment and details are verified.</span></label><div class="submit-row"><button type="submit" id="submitBtn">Submit Order</button><div id="statusBox" class="status"></div></div></form><iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe></div></div></section>
   </main><footer>© 2026 Ads Success PH / Joebert Greganda. Facebook Ads Services.</footer>
   <script>
